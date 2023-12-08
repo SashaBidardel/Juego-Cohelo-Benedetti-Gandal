@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Juego de adivinar autores</title>
+</head>
+<body>
+    <h1>Juego de adivinar autores</h1>
+    <p>Adivina el autor de la siguiente frase:</p>
+    <p>{{ frase }}</p>
+    {% if mensaje %}
+        <p>{{ mensaje }}</p>
+    {% endif %}
+    <p>Aciertos: {{ aciertos }}</p>
+    
+    <form action="/juego" method="post">
+        <p>Selecciona el autor:</p>
+        <input type="checkbox" id="benedetti" name="respuesta" value="Mario Benedetti">
+        <label for="benedetti">Benedetti</label><br>
+        <input type="checkbox" id="coehlo" name="respuesta" value="Paulo Coelho">
+        <label for="coehlo">Cohelo</label><br>
+        <input type="checkbox" id="gandalf" name="respuesta" value="Gandalf">
+        <label for="gandalf">Gandalf</label><br>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
+
+

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Resultado del juego</title>
+</head>
+<body>
+    <h1>¡Juego terminado!</h1>
+    <p>{{ mensaje }}</p>
+    <p>Aciertos totales: {{ aciertos }}</p>
+    <p>Intentos realizados: {{ intentos }}</p>
+    
+    <!-- Botón para volver a jugar -->
+    <form action="/juego" method="get">
+        <input type="submit" value="Volver a jugar">
+    </form>
+</body>
+</html>
+
+
+
