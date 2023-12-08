@@ -4,7 +4,7 @@ Proyecto en el que desarrollo un juego de preguntas en el que se le presenta al 
 
 ## Webscraping
 
-Para sacar las frases creé la clase frase con los campos texto y autor y mediante webscraping las saqué de páginas en internet, las limpié y depuré para que tuviesen el mismo formato
+Para sacar las frases creé la clase frase con los campos texto y autor y mediante web scraping las saqué de páginas en internet, las limpié y depuré para que tuviesen el mismo formato
 
 ## Templates
 
