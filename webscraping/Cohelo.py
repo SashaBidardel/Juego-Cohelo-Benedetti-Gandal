@@ -12,13 +12,13 @@ import requests
 from bs4 import BeautifulSoup
 from clases.Frase import Frase  
 def obtener_frases_Cohelo():
-    
+
     url = 'https://psicologiaymente.com/reflexiones/frases-de-paulo-coelho'
 
-    # Realizar la solicitud HTTP
+   
     response = requests.get(url)
 
-    # Verificar si la solicitud fue exitosa (código de estado 200)
+   
     if response.status_code == 200:
         # Parsear el HTML usando BeautifulSoup
         soup = BeautifulSoup(response.text, 'html.parser')
@@ -47,7 +47,7 @@ def obtener_frases_Cohelo():
     else:
         print('No se pudo obtener el contenido de la página')
 
-# Si quieres verificar y probar la función desde este archivo, puedes hacerlo así:
+
 if __name__ == "__main__":
     frases, total = obtener_frases_Cohelo()
     for frase in frases:

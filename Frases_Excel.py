@@ -35,15 +35,13 @@ def obtener_frases():
         frases.append(frase)
     return frases
 
-# Esta función toma una lista de frases y las guarda en un archivo Excel
-def guardar_en_excel(lista_frases):
-    # Crear un DataFrame de pandas con las frases y sus autores
-    df = pd.DataFrame(lista_frases, columns=['Texto', 'Autor'])
 
-    # Escribir el DataFrame en un archivo Excel
+def guardar_en_excel(lista_frases):
+    
+    df = pd.DataFrame(lista_frases, columns=['Texto', 'Autor'])
     df.to_excel('frases2.xlsx', index=False)
 
-# Obtener las frases de los diferentes autores
+
 frases = obtener_frases()
 
 # Llamar a la función para guardar las frases en Excel

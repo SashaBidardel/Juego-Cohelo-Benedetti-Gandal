@@ -16,10 +16,10 @@ def obtener_frases_Gandalf():
     
     url = 'https://www.lifeder.com/frases-de-gandalf/'
 
-    # Realizar la solicitud HTTP
+   
     response = requests.get(url)
 
-    # Verificar si la solicitud fue exitosa (código de estado 200)
+  
     if response.status_code == 200:
         # Parsear el HTML usando BeautifulSoup
         soup = BeautifulSoup(response.text, 'html.parser')
