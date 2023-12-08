@@ -30,16 +30,16 @@ def obtener_frases_Gandalf():
         # Omitir las primeras dos frases
         frases_a_mostrar = frases_elements[2:]
 
-        # Lista para almacenar objetos Frase
+       
         frases_gandalf = []
 
-        # Contador de frases
+      
         contador = 0
 
-        # Iterar sobre los elementos que contienen las frases a partir del tercer elemento
+        
         for frase_element in frases_a_mostrar:
             texto = frase_element.get_text(strip=True)  # Obtener el texto de la frase
-            autor = 'Gandalf'  # El autor es Gandalf en este caso
+            autor = 'Gandalf' 
 
             # Limpiar el texto 
             # Eliminar número, punto y espacios al inicio del texto
@@ -48,13 +48,13 @@ def obtener_frases_Gandalf():
             if texto_limpio:  # Si el texto no está vacío
                 nueva_frase = Frase(texto_limpio, autor)
                 frases_gandalf.append(nueva_frase)
-                contador += 1  # Incrementar el contador
+                contador += 1 
 
         return frases_gandalf, contador
     else:
         print('No se pudo obtener el contenido de la página')
 
-# Si quieres verificar y probar la función desde este archivo, puedes hacerlo así:
+
 if __name__ == "__main__":
     frases, total = obtener_frases_Gandalf()
     for frase in frases:

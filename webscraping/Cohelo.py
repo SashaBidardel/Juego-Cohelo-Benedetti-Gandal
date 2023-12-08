@@ -26,22 +26,22 @@ def obtener_frases_Cohelo():
         # Encontrar todas las frases dentro de los elementos h3
         frases_elements = soup.find_all('h3')
 
-        # Lista para almacenar objetos Frase
+       
         frases_Cohelo = []
 
         # Contador de frases
         contador = 0
 
-        # Iterar sobre los elementos que contienen las frases
+       
         for frase_element in frases_elements[:-4]:
             texto = frase_element.get_text(strip=True)  # Obtener el texto de la frase
-            autor = 'Paulo Coelho'  # El autor es Paulo Coelho en este caso
+            autor = 'Paulo Coelho'  
             # Eliminar número, punto y espacios al inicio del texto
             texto_limpio = texto.lstrip('0123456789. ')
             # Crear un objeto Frase y agregarlo a la lista
             nueva_frase = Frase(texto_limpio, autor)
             frases_Cohelo.append(nueva_frase)
-            contador += 1  # Incrementar el contador
+            contador += 1  
 
         return frases_Cohelo, contador
     else:

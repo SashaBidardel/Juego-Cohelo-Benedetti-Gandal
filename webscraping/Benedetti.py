@@ -29,18 +29,18 @@ def obtener_frases_Benedetti():
         # Ignorar las primeras cinco y la última frase
         frases_a_mostrar = frases_elements[5:-1]
 
-        # Lista para almacenar objetos Frase
+        
         frases_benedetti = []
 
-        # Contador de frases
+      
         contador = 0
 
-        # Iterar sobre los elementos que contienen las frases a partir del sexto elemento
+        
         for frase_element in frases_a_mostrar:
             texto = frase_element.get_text(strip=True)  # Obtener el texto de la frase
-            autor = 'Mario Benedetti'  # El autor es Mario Benedetti en este caso
+            autor = 'Mario Benedetti'  
 
-            # Limpiar el texto utilizando expresiones regulares
+            # Limpiar el texto 
             texto_limpio = re.sub(r'^\d+\.\s*', '', texto)  # Eliminar número y punto al principio
             texto_limpio = re.sub(r'[“”]', '', texto_limpio)   # Eliminar comillas dobles
             texto_limpio = texto_limpio.strip()  # Eliminar espacios al principio y al final
@@ -48,13 +48,13 @@ def obtener_frases_Benedetti():
             # Crear un objeto Frase y agregarlo a la lista
             nueva_frase = Frase(texto_limpio, autor)
             frases_benedetti.append(nueva_frase)
-            contador += 1  # Incrementar el contador
+            contador += 1 
 
         return frases_benedetti, contador
     else:
         print('No se pudo obtener el contenido de la página')
 
-# Si quieres verificar y probar la función desde este archivo, puedes hacerlo así:
+
 if __name__ == "__main__":
     frases, total = obtener_frases_Benedetti()
     for frase in frases:
